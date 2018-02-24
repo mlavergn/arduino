@@ -72,14 +72,20 @@ void setup() {
 
 // letter A
 int a[] = {LOWER_LEFT, UPPER_LEFT, TOP, UPPER_RIGHT, LOWER_RIGHT, MIDDLE};
+int b[] = {LOWER_LEFT, UPPER_LEFT, TOP, UPPER_RIGHT, MIDDLE, LOWER_RIGHT, BOTTOM};
+int c[] = {TOP, UPPER_LEFT, LOWER_LEFT, BOTTOM};
+int d[] = {UPPER_LEFT, LOWER_LEFT, BOTTOM, LOWER_RIGHT, UPPER_RIGHT, TOP};
+int e[] = {UPPER_LEFT, LOWER_LEFT, TOP, MIDDLE, BOTTOM};
+int f[] = {UPPER_LEFT, LOWER_LEFT, TOP, MIDDLE};
+int h[] = {UPPER_LEFT, LOWER_LEFT, UPPER_RIGHT, LOWER_RIGHT, MIDDLE};
+int l[] = {UPPER_LEFT, LOWER_LEFT, BOTTOM};
+int o[] = {UPPER_LEFT, LOWER_LEFT, BOTTOM, LOWER_RIGHT, UPPER_RIGHT, TOP};
+int z[] = {TOP, UPPER_RIGHT, MIDDLE, LOWER_LEFT, BOTTOM};
 
 // toogles the character LEDs
-void write(int arr[]) {
+#define writeChar(arr) _writeChar(arr, sizeof(arr)/sizeof(int))
+void _writeChar(int arr[], int count) {
     all_off();
-    // this isn't correct
-    // int count = sizeof(arr) / sizeof(int);
-    // Serial.println(sizeof(arr));
-    int count = 6;
     for (int i = 0; i < count; i++) {
         digitalWrite(arr[i], HIGH);
         delay(100);
@@ -89,14 +95,19 @@ void write(int arr[]) {
 // main loop
 void loop() {
     Serial.println("Starting ...");
-    //  setup();
 
-    all_on();
+    writeChar(c);
     delay(1000);
 
-    all_off();
+    writeChar(h);
     delay(1000);
 
-    write(a);
+    writeChar(l);
+    delay(1000);
+
+    writeChar(o);
+    delay(1000);
+
+    writeChar(e);
     delay(1000);
 }
