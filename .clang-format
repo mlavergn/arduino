@@ -1,0 +1,10 @@
+BasedOnStyle: LLVM
+
+AccessModifierOffset: -4
+AllowShortIfStatementsOnASingleLine: false
+BreakBeforeBraces: Attach
+ColumnLimit: 0
+IndentCaseLabels: true
+IndentWidth: 4
+SortIncludes: true
+TabWidth: 4
