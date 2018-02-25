@@ -3,7 +3,7 @@
 
 This is an introduction on how to drive a 4 digit LED using only a Arduino.  
 
-- 1x 4 digit LED (461BS)
+- 1x 4 digit LED (0461BS)
 - 12x male:male wires
 - 8x 220 ohm resistors
 
